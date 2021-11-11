@@ -1,23 +1,34 @@
-import { useMoralisDapp } from "../providers/MoralisDappProvider/MoralisDappProvider";
+//import { useMoralisDapp } from "../providers/MoralisDappProvider/MoralisDappProvider";
 import { useMoralis } from "react-moralis";
 
 
 function Authenticate() {
-    const { authenticate, isAuthenticated, logout } = useMoralis();
-    const { walletAddress } = useMoralisDapp();
+    const { authenticate, isAuthenticated, user, logout } = useMoralis();
+    //const { walletAddress } = useMoralisDapp();
 
     if ( !isAuthenticated ) {
         return (
-            <div onClick={() => authenticate({ signingMessage: "Get Insurance"})}>
-                <p>Authenticate</p>
+            <div>
+                <button id="btn-login" 
+                onClick={() => authenticate({ signingMessage: "Get Aquila Insurance"})}>
+                Connect
+                </button>
             </div>
         );
     }
 
     return (
-        <div onClick={() =>logout()}>
-            <p>{ walletAddress }</p>
+        <>
+        <div>
+            <h4>Welcome {user.get("username")}</h4>
         </div>
+        <div>
+            <button id="btn-logout"
+            onClick={() =>logout()}>
+            Logout
+            </button>
+        </div>
+        </>
     );
 }
 

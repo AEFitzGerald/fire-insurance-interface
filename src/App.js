@@ -2,6 +2,7 @@ import './App.css';
 import { useMoralis } from "react-moralis";
 import { useEffect } from "react";
 import Authenticate from './components/Authenticate';
+
 import {
     BrowserRouter as Router,
     //Switch,
@@ -9,6 +10,7 @@ import {
     //NavLink,
     //Redirect
 } from "react-router-dom";
+
 
 
 const App = () => {
@@ -23,6 +25,7 @@ const App = () => {
     return (
         <Router>
             <Authenticate></Authenticate>
+    
         </Router>
 
     );
