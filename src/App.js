@@ -1,36 +1,30 @@
 import './App.css';
+import React from "react";
+import Connect from './components/Connect';
 import { useMoralis } from "react-moralis";
-import { useEffect } from "react";
-import Authenticate from './components/Authenticate';
-
-import {
-    BrowserRouter as Router,
-    //Switch,
-    //Route,
-    //NavLink,
-    //Redirect
-} from "react-router-dom";
+import PropertyForm from './components/PropertyForm';
 
 
+function App(){
 
-const App = () => {
-    const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-        useMoralis();
-    
-    useEffect(() => {
-        if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading ) enableWeb3();
-        // eslint-diable-next-line react-hooks/exhaustive-deps
-    }, [isAuthenticated, isWeb3Enabled]);
+const { isAuthenticated } = useMoralis();
 
+if (!isAuthenticated ) {
     return (
-        <Router>
-            <Authenticate></Authenticate>
-    
-        </Router>
+        <>
+        <div>
+            <Connect/>
+        </div>
+        </>
+    )
+}
+return (
+    <div>
+        <PropertyForm/>
+    </div>
+);
+}
 
-    );
-};
-
-    export default App;
+export default App;
 
 
