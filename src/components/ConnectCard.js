@@ -1,5 +1,5 @@
 import React from 'react';
-import logoLarge from './logoLarge.png'
+import logoLarge from './imgs/logoLarge.png'
 import ConnectButton from './ConnectButton';
 
 const ConnectCard = () => {

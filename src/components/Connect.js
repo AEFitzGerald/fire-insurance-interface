@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ConnectCard from './ConnectCard';
 import BreadCrumbs from './BreadCrumbs';
-import desktopHero from './desktopHero.png';
-import mobileHero from  './mobileHero.png'
+import desktopHero from './imgs/desktopHero.png';
+import mobileHero from  './imgs/mobileHero.png'
 
 const Connect = () => {
 

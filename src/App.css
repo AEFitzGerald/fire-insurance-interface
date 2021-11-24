@@ -57,14 +57,21 @@ NAVIGATION-----*/
     transform: scale(1.2);
 }
 
-/*----HERO IMAGE ---- */
+/*---- IMAGEs ---- */
 
 .heroImg {
-        background-size: cover;
+    background-size: cover;
+}
+.heroImg,
+.treelineImg {
         position: relative;
         height: 100vh;
         background-position: bottom;
         background-repeat: no-repeat;
+}
+
+.treelineImg {
+    background-size: 100% 100%;
 }
 
 /*------- 
@@ -78,6 +85,11 @@ CARD-CONTAINER-----*/
     margin: 0 auto;
 }
 
+.colStep {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .card {
     align-items: center;
@@ -120,25 +132,44 @@ p.cardText {
 
 .crumbCol {
     background-color: #862129bb;
-    text-align: center;
     width: 400px;
 }
 
+.crumbColSolo {
+    width: 300px;
+}
+
+.crumbCol,
+.crumbColSolo {
+    text-align: center;    
+}
+
+.crumbNumbersSolo,
+.crumbTitleSolo,
 .crumbNumbers,
 .crumbTitle {
     font-size: 18px;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 35px;
+    text-transform: uppercase;
 }
 
+.crumbNumbersSolo,
 .crumbNumbers {
     color: #ffffff;
 }
 
+.crumbTitleSolo {
+    color: #492A2A;
+}
+
 .crumbTitle {
-    color: #FE3838;
-    padding-top: 35px;
-    text-transform: uppercase;
+    color: #FE3838;   
+}
+
+.crumbDescriptionSolo {
+    padding-top: 10px;
 }
 
 .crumbDescription {
@@ -161,11 +192,36 @@ input {
     color: #ffffff;
 }
 
-#copyright-date {
-    font-family: 'Josefin Sans', sans-serif;
+/*-------Footer -------*/
+
+.footerRow,
+#copyright {
+    display: flex;
+    align-items: center;
+    flex-direction: row;    
 }
 
-#copyright-company {
+.footerRow {
+    margin-left: 10px;
+    justify-content: left;
+}
+
+#copyright {
+    justify-content: center;
+    align-items: baseline;
+}
+
+.copyright {
+    color: #FE3838;
+    font-size: 12px;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.companyTag {
+    font-size: 12px;
+}
+
+.copyrightCompany {
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
 }
