@@ -3,12 +3,12 @@ import { useMoralis } from "react-moralis";
 
 const PropertyForm = () => {
 
-    const { logout } = useMoralis();
+    const { logout, isAuthenticating } = useMoralis();
         return (
             <> 
                 <div className="containerFlex">
                     <div className="topnavLeft">
-                        <a href="#logout" onClick={() => logout()}>LOGOUT</a>
+                        <a href="#logout" onClick={() => logout()} disabled={isAuthenticating}>LOGOUT</a>
                     </div>
                     <div className="topnavRight">
                         <a href="#about">ABOUT</a>
@@ -16,7 +16,6 @@ const PropertyForm = () => {
                 </div>
                 <div className="cardContainer" >
                     <PropertyCard/>
-                    
                 </div>
             </>
         );

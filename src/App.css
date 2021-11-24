@@ -16,7 +16,9 @@ body {
     margin: 0 auto;
 }
 
-/*----- MOBILE STYLES 
+/*----- MOBILE STYLES-------------------
+
+
 NAVIGATION-----*/
 
 .container {
@@ -50,10 +52,19 @@ NAVIGATION-----*/
     width: 100px;
 }
 
-
 .topnavRight a:hover,
 .topnavLeft a:hover {
     transform: scale(1.2);
+}
+
+/*----HERO IMAGE ---- */
+
+.heroImg {
+        background-size: cover;
+        position: relative;
+        height: 100vh;
+        background-position: bottom;
+        background-repeat: no-repeat;
 }
 
 /*------- 
@@ -61,11 +72,12 @@ CARD-CONTAINER-----*/
 
 .cardContainer {
     display: flex;
-    height: 800px;
+    height: 600px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: 0 auto;
 }
+
 
 .card {
     align-items: center;
@@ -88,6 +100,7 @@ p.cardText {
     border-radius: 8px;
     background-color: #FE3838;
     color: #492a2a;
+    cursor: pointer;
     height: 50px;
     font-weight: 700;
     font-family: "roboto";
@@ -95,9 +108,25 @@ p.cardText {
     box-shadow: 4px 4px 2px rgba(51, 16, 16, 0.5);   
 }
 
+/*------ Breadcrumbs, 4 steps to get insurance ---*/
+.row { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.crumbCol {
+    background-color: #862129bb;
+    text-align: center;
+    width: 400px;
+}
+
 .crumbNumbers,
 .crumbTitle {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -108,23 +137,16 @@ p.cardText {
 
 .crumbTitle {
     color: #FE3838;
+    padding-top: 35px;
     text-transform: uppercase;
 }
 
-.row { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 30px;
-    width: 100%;
+.crumbDescription {
+    font-size: 14px;
+    padding-bottom: 5px;
 }
 
-.crumbCol {
-    text-align: center;
-    width: 400px;
-}
-
+/*------- PropertyForm-------*/
 form {
     display: flex;
     justify-content: center;
@@ -148,4 +170,50 @@ input {
     font-style: italic;
 }
 
+@media ( min-width: 650px ) {
+    .heroImg {
+        background-position: center center;
+    }
+}
 
+@media (min-width: 768px) {
+
+    .cardContainer {
+        align-items: center;
+        height: 580px;
+    }
+
+    .crumbCol {
+        padding-right: 10px;
+    }
+
+    .row {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .crumbTitle {
+        padding-top: 2px;
+    }
+
+    .crumbDescription {
+        padding-bottom: 2px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .cardContainer {
+        height: 700px;
+    }
+
+    .crumbDescription {
+        font-size: 16px;
+        padding-bottom: 2px;
+    }
+
+    .crumbNumbers,
+    .crumbTitle {
+        font-size: 24px;
+    }
+}

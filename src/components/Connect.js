@@ -1,34 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ConnectCard from './ConnectCard';
 import BreadCrumbs from './BreadCrumbs';
+import desktopHero from './desktopHero.png';
+import mobileHero from  './mobileHero.png'
 
 const Connect = () => {
 
-const styles = {
-    hero: {
-        backgroundImage: "url(/heroDesktop.png)",
-        backgroundSize: 'cover',
-        position: 'relative',
-        backgroundPosition: 'top',
-        height: "100vh"
-    }
-}
+    
+    const imageUrl = useWindowWidth() >= 650 ? desktopHero : mobileHero;
 
     return (
-        <div id="hero-img" style={ styles.hero }>
+        <div id="hero-img" className="heroImg" style={{ backgroundImage:`url(${ imageUrl })` }}>
             <div className="container">
                 <div className="topnavRight">
                     <a href="#about">ABOUT</a>
                 </div>
             </div>
-                <div className="cardContainer" >
+                <div className="cardContainer">
                     <ConnectCard/>
                 </div>
-                <BreadCrumbs/>
-            
+                <BreadCrumbs/>    
         </div>
     );
+}
+
+const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
+
+
+    useEffect(() => {   
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        
+        window.addEventListener('resize', handleWindowResize); 
+        
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
+
+    }, []);
+
+    return windowWidth;
 };
+
 
 
 export default Connect;
