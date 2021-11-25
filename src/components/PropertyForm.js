@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import PropertyCard from "./PropertyCard";
+import NavAfterConnect from './NavAfterConnect';
+import React, { useState, useEffect } from 'react';
 import treelineLg from './imgs/treelineLg.png';
 import treelineSm from  './imgs/treelineSm.png'
-import NavAfterConnect from './NavAfterConnect';
 import Footer from './Footer';
 
 
@@ -10,26 +10,24 @@ const PropertyForm = () => {
 
     const imageUrl = useWindowWidth() >= 650 ? treelineLg : treelineSm;
 
-    
         return (
-            <> 
-            <div id="treelineImg" className="treelineImg" style={{ backgroundImage:`url(${ imageUrl })` }}>
-                <NavAfterConnect/>
-                <div className="cardContainer colStep" >
-                    <PropertyCard/>
-                    <div className="crumbColSolo">
-                        <h5 className="crumbTitleSolo">
-                            <span className="crumbNumbersSolo">2. </span>Property Details
-                        </h5>
-                        <p className="crumbDescriptionSolo">Enter the Longitude and Latitude of your property in decimal degrees, for example: -123.95908355712889, 53.25042550620077</p>
+            <>  
+                <div id="treelineImg" className="treelineImg" style={{ backgroundImage:`url(${ imageUrl })` }}>
+                    <NavAfterConnect/>
+                    <div className="cardContainer colStep" >
+                        <PropertyCard/>
+                        <div className="crumbColSolo">
+                            <h5 className="crumbTitleSolo">
+                                <span className="crumbNumbersSolo">2. </span>Property Details
+                            </h5>
+                            <p className="crumbDescriptionSolo">Enter the Longitude and Latitude of your property in decimal degrees, for example: -123.95908355712889, 53.25042550620077</p>
+                        </div>
                     </div>
+                    <Footer/>
                 </div>
-                <Footer/>
-            </div>
             </>
         );
     };
-
     const useWindowWidth = () => {
         const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
     
@@ -48,8 +46,6 @@ const PropertyForm = () => {
         }, []);
     
         return windowWidth;
-    };
-    
-    
-    
+};
+
     export default PropertyForm;

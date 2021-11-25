@@ -1,33 +1,29 @@
+import NavAfterConnect from './NavAfterConnect';
 import React, { useState, useEffect } from 'react';
-import PremiumCard from "./PremiumCard";
 import treelineLg from './imgs/treelineLg.png';
 import treelineSm from  './imgs/treelineSm.png'
-import NavAfterConnect from './NavAfterConnect';
 import Footer from './Footer';
 
 
-const PremiumSet = () => {
+const About = () => {
 
     const imageUrl = useWindowWidth() >= 650 ? treelineLg : treelineSm;
 
-    
         return (
-            <> 
-            
-                <NavAfterConnect/>
-                <div className="cardContainer colStep" >
-                    <PremiumCard/>
-                    <div className="crumbColSolo">
-                        <h5 className="crumbTitleSolo">
-                            <span className="crumbNumbersSolo">3. </span>Premium Set
-                        </h5>
+            <>  
+                <div id="treelineImg" className="treelineImg" style={{ backgroundImage:`url(${ imageUrl })` }}>
+                    <NavAfterConnect/>
+                    <div className="cardContainer colStep" >
+                        <h3>About</h3>
+                    
+                        <p>Lorem Ipsum Cupcake sprinkles dog whispers tear drops put out forest fires. Write something about the greater vision of the project. Drop regards to Moralis, Chainlink, Ethereum (logos) team member names with a link to them if they want.</p>
+                    
                     </div>
+                    <Footer/>
                 </div>
-                <Footer/>
             </>
         );
     };
-
     const useWindowWidth = () => {
         const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
     
@@ -46,6 +42,6 @@ const PremiumSet = () => {
         }, []);
     
         return windowWidth;
-    };
+};
 
-export default PremiumSet;
+export default About;

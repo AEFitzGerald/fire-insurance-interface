@@ -3,6 +3,7 @@ import ConnectCard from './ConnectCard';
 import BreadCrumbs from './BreadCrumbs';
 import desktopHero from './imgs/desktopHero.png';
 import mobileHero from  './imgs/mobileHero.png'
+import Copyright from './Copyright';
 
 const Connect = () => {
 
@@ -19,7 +20,8 @@ const Connect = () => {
                 <div className="cardContainer">
                     <ConnectCard/>
                 </div>
-                <BreadCrumbs/>    
+                <BreadCrumbs/>
+                <Copyright/>
         </div>
     );
 }

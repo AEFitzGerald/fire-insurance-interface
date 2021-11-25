@@ -2,12 +2,13 @@ import React from 'react';
 import PropertyButton from './PropertyButton';
 
 
+
 const PropertyCard = () => {
     return (
         <div className="card">
-            <form>
+            <form >
                 <label>Longitude and Latitude</label>
-                <input type="text"/>
+                <textarea/>
                 <PropertyButton/>
             </form>         
         </div>

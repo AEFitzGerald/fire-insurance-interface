@@ -31,17 +31,13 @@ NAVIGATION-----*/
     justify-content: space-between;
 }
 
+.topnavLeft {
+    margin: 10px 0 0 10px;
+}
+
 .topnavRight {
-    overflow: hidden;
+    margin: 10px 10px 0 0;
     float: right;
-}
-
-.topnavRight a {
-    margin: 15px 10px 0 0;
-}
-
-.topnavLeft a {
-    margin: 15px 0 0 10px;
 }
 
 .topnavRight a,
@@ -52,34 +48,29 @@ NAVIGATION-----*/
     width: 100px;
 }
 
-.topnavRight a:hover,
-.topnavLeft a:hover {
+.topnavRight:hover,
+.topnavLeft:hover {
     transform: scale(1.2);
 }
 
 /*---- IMAGEs ---- */
 
-.heroImg {
-    background-size: cover;
-}
+
 .heroImg,
 .treelineImg {
-        position: relative;
-        height: 100vh;
-        background-position: bottom;
-        background-repeat: no-repeat;
-}
-
-.treelineImg {
-    background-size: 100% 100%;
-}
+    position: relative;
+    height: 100vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
 
 /*------- 
 CARD-CONTAINER-----*/
 
 .cardContainer {
     display: flex;
-    height: 600px;
+    height: 700px;
     justify-content: center;
     align-items: flex-end;
     margin: 0 auto;
@@ -120,18 +111,22 @@ p.cardText {
     box-shadow: 4px 4px 2px rgba(51, 16, 16, 0.5);   
 }
 
+.btn:hover {
+    transform: scale(1.1)
+}
+
 /*------ Breadcrumbs, 4 steps to get insurance ---*/
 .row { 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 30px 0 40px 0;
     width: 100%;
 }
 
 .crumbCol {
-    background-color: #862129bb;
+    background-color: #862129cb;
     width: 400px;
 }
 
@@ -184,21 +179,27 @@ form {
     flex-direction: column;
 }
 
-input {
-    width: 200px;
-    height: 50px;
-    margin: 10px 0 40px 0;
+label {
+    font-size: 14px;
+}
+
+textarea {
     background-color:rgba(80, 52, 52, 0.795);
     color: #ffffff;
+    height: 4.2em;
+    width: 23em;
+    font-size: 12px;
+    margin: 10px 0 40px 0;
+    width: 200px;
 }
 
 /*-------Footer -------*/
 
 .footerRow,
-#copyright {
+.copyright {
     display: flex;
-    align-items: center;
-    flex-direction: row;    
+    align-items: center;  
+    width: 100vw; 
 }
 
 .footerRow {
@@ -206,24 +207,27 @@ input {
     justify-content: left;
 }
 
-#copyright {
+.copyright {
     justify-content: center;
-    align-items: baseline;
+    flex-direction: column;
 }
 
-.copyright {
-    color: #FE3838;
-    font-size: 12px;
+.copyrightDate,
+.copyrightCompany {
+    color: #492A2A;
+    font-size: 13px;
+}
+
+.copyrightDate {
     font-family: 'Josefin Sans', sans-serif; 
 }
 
-.companyTag {
-    font-size: 12px;
+.copyrightCompany {
+    font-style: italic;
 }
 
-.copyrightCompany {
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
+.companyTag {
+    font-size: 13px;
 }
 
 @media ( min-width: 650px ) {
@@ -236,7 +240,6 @@ input {
 
     .cardContainer {
         align-items: center;
-        height: 580px;
     }
 
     .crumbCol {
@@ -260,7 +263,7 @@ input {
 @media (min-width: 1200px) {
 
     .cardContainer {
-        height: 700px;
+        height: 800px;
     }
 
     .crumbDescription {
