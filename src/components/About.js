@@ -16,7 +16,14 @@ const About = () => {
                     <div className="cardContainer colStep" >
                         <h3>About</h3>
                     
-                        <p>Lorem Ipsum Cupcake sprinkles dog whispers tear drops put out forest fires. Write something about the greater vision of the project. Drop regards to Moralis, Chainlink, Ethereum (logos) team member names with a link to them if they want.</p>
+                        <p>Aquila is a trustless dapp for parametric forest fire insurance; there is no centralized intermediary that can interfere with the insurance contracts. Once a contract is deployed, it is guarenteed to payout the claim. Harnessing the unique properties of blockchain is what makes this emerging sector of insurance so unique. Blockchains are tamperproof, immutable environments, leaving security as a fundamental component built into the core. 
+Parametric insurance is a non-traditional insurance product that offers pre-specified payouts based upon a trigger event. In the case of our forest fire application, our trigger event is a forest fire crossing a pre-set property area. This is done by comparing satellite images of burning areas against coordinates of the land. In order to get the external data securely into the smart contracts, Chainlink is used, which provides decentralized oracle network middleware. 
+Aquila is at the forefront of the current global paradigm shift leading towards decentralized parametric insurance systems. Aiming to offer the first fully regulated parametric forest fire insurance in BC, Canada, as well as expanding to other regions around the world. This is a revolutionary approach to delivering insurance, and is presently an unexplored open market. 
+On August 9, 2021, the United Nations released a climate report titled ‘Code Red For Humanity’. stressing the severity of the worldwide climate crisis. This highlights another area of concern, and as more forest fire’s occur more frequently and on a more extreme scale, we must assure the company’s values align with those of the planet. 
+
+for more information and details of the product see our v1 docs: 
+https://docs.google.com/presentation/d/1XfivhTzK0jhqEkUjGytl-xc8XxGbzl3bsabNy1H1jUc/edit#slide=id.ge7e7b15d03_3_36 
+</p>
                     
                     </div>
                     <Footer/>
