@@ -14,7 +14,7 @@ const Connect = () => {
         <div id="hero-img" className="heroImg" style={{ backgroundImage:`url(${ imageUrl })` }}>
             <div className="container">
                 <div className="topnavRight">
-                    <a href="#about">ABOUT</a>
+                    <a href="/About">ABOUT</a>
                 </div>
             </div>
                 <div className="cardContainer">

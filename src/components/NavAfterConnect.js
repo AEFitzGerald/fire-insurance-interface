@@ -10,9 +10,6 @@ const NavAfterConnect = () => {
             <div className="topnavLeft">
                 <a href="#logout" onClick={() => logout()} disabled={isAuthenticating}>LOGOUT</a>
             </div>
-            <div className="topnavRight">
-                <a href="#about">ABOUT</a>
-            </div>
         </div>
     );
 }
