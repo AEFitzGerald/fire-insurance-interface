@@ -16,10 +16,10 @@ body {
     margin: 0 auto;
 }
 
-/*----- MOBILE STYLES-----------
+/*----- MOBILE STYLES--------*/
 
 
-NAVIGATION-----*/
+/*-------Navigation and Links---*/
 
 .container {
     position: absolute;
@@ -62,7 +62,7 @@ NAVIGATION-----*/
     text-align: center;
 }
 
-/*---- IMAGEs ---- */
+/*---- Background Images ---- */
 
 
 .heroImg,
@@ -74,8 +74,7 @@ NAVIGATION-----*/
     background-size: cover;
 } 
 
-/*------- 
-CARD-CONTAINER-----*/
+/*------- Card, Buttons, and Card Containers ----*/
 
 .cardContainer {
     display: flex;
@@ -88,7 +87,7 @@ CARD-CONTAINER-----*/
 .colStep {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -182,9 +181,12 @@ p.cardText {
     padding-bottom: 5px;
 }
 
-/*----------- About ---------*/
+/*--------- About Page ---------*/
 
 .aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     width: 95%;
 }
@@ -198,6 +200,7 @@ h3#about  {
 }
 
 /*--------- PropertyForm-------*/
+
 form {
     display: flex;
     justify-content: center;
@@ -255,6 +258,8 @@ textarea {
     font-size: 13px;
 }
 
+/*------------ TABLET STYLES ----------*/
+
 @media ( min-width: 650px ) {
     .heroImg {
         background-position: center center;
@@ -267,6 +272,10 @@ textarea {
         width: 70%;
     }
 
+    .aboutCopy {
+        margin: 40px 0;
+    }
+    
     .cardContainer {
         align-items: center;
     }
@@ -289,13 +298,21 @@ textarea {
     }
 }
 
+
+/*---------- DESKTOP STYLES ----------*/
+
 @media (min-width: 1200px) {
     
     .aboutContainer {
         width: 40%;
     }
+
     .cardContainer {
         height: 800px;
+    }
+
+    .aboutCopy {
+        margin: 150px 0;
     }
 
     .crumbDescription {

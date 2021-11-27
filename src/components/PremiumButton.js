@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const PremiumButton = () => {
 
     return (
-        <button className="btn" onClick={ goToPayForSmartContract }>Check Status</button>
+        <Link to="/confirm" className='btn'>Check Status</Link>
     );
 };
 

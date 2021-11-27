@@ -3,7 +3,7 @@ import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { MoralisProvider } from 'react-moralis';
-
+import { BrowserRouter } from 'react-router-dom';
 
 /* Moralis init code */
 const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
@@ -14,7 +14,9 @@ const Application = () => {
     if ( isServerInfo )
         return (
             <MoralisProvider appId = { APP_ID } serverUrl = { SERVER_URL }>
-                <App isServerInfo />
+                <BrowserRouter>
+                    <App isServerInfo />
+                </BrowserRouter>
             </MoralisProvider>
         );
     else {

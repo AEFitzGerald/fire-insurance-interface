@@ -4,7 +4,9 @@ import About from './components/About';
 import Connect from './components/Connect';
 import { useMoralis } from "react-moralis";
 import PropertyForm from './components/PropertyForm';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
+import PremiumSet from './components/PremiumSet';
+import Confirm from './components/Confirm';
 
 
 function App(){
@@ -13,19 +15,21 @@ const { isAuthenticated } = useMoralis();
 
 if (!isAuthenticated ) {
     return (
-        <BrowserRouter>
         <div>
             <Routes>
                 <Route exact path='/' element= { <Connect/> }/>
                 <Route path ="/about" element= { <About/> }/>
             </Routes>
-        </div>
-        </BrowserRouter>  
+        </div> 
     )
 }
 return (
     <div>
         <PropertyForm/>
+        <Routes>
+            <Route path ="/premium" element={ <PremiumSet/> }/>
+            <Route path ="/confirm" element={ <Confirm/> }/>
+        </Routes>
     </div>
     )
 }
